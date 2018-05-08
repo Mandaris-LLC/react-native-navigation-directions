@@ -7,7 +7,7 @@ export const OpenMapDirections = (frmCoord = null, toCoord, transportType) => ne
 	let _toCoord;
 	const _frmCoord = _checkParameters(frmCoord) !== null ? `?saddr=${_checkParameters(frmCoord)}` : '';
 	if (_checkParameters(toCoord) !== null) {
-		_toCoord = (_checkParameters(frmCoord) === null : '?' : '&') + `daddr=${_checkParameters(toCoord)}`
+		_toCoord = (_checkParameters(frmCoord) === null ? '?' : '&') + `daddr=${_checkParameters(toCoord)}`
 	} else {
 		throw new Error('You need to pass a valid endpoint(number)')
 	};
